@@ -1,0 +1,281 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* FONTS */
+@font-face {
+  font-family: "Supreme-Regular";
+  src: url("./fonts/Futura\ Book\ font.ttf") format("woff2"),
+    url("./fonts/Futura\ Book\ font.ttf") format("woff"),
+    url("./fonts/Futura\ Book\ font.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Medium";
+  src: url("./fonts/futura\ medium\ bt.ttf") format("woff2"),
+    url("./fonts/futura\ medium\ bt.ttf") format("woff"),
+    url("./fonts/futura\ medium\ bt.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Medium";
+  src: url("./fonts/futura\ medium\ bt.ttf") format("woff2"),
+    url("./fonts/futura\ medium\ bt.ttf") format("woff"),
+    url("./fonts/futura\ medium\ bt.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Supreme-Bold";
+  src: url("./fonts/Futura\ Heavy\ font.ttf") format("woff2"),
+    url("./fonts/Futura\ Heavy\ font.ttf") format("woff"),
+    url("./fonts/Futura\ Heavy\ font.ttf") format("truetype");
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  font-family: "Supreme-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #1e1e1e;
+  color: #fff;
+  /* max-width: 1440px;
+  margin: 0 auto;
+  position: relative; */
+}
+
+/* COLORS */
+.bg-gradient {
+  background: linear-gradient(91.22deg, #00eed1 3.15%, #009bb4 99.56%), #d9d9d9;
+}
+.bg-main {
+  /* background: linear-gradient(91.22deg, #00eed1 3.15%, #009bb4 99.56%), #d9d9d9; */
+  background: #1e1e1e;
+  /* color :#fff */
+}
+.bg-gradient-text {
+  background: linear-gradient(91.22deg, #00eed1 3.15%, #009bb4 99.56%), #ffffff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+/* SIDEBAR */
+.sidebar::-webkit-scrollbar {
+  width: 0;
+}
+
+/* ----------ThemeSwitcher---------- */
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 82px;
+  height: 32px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+}
+
+.switch .text {
+  z-index: 1;
+  font-size: 16px;
+  line-height: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-6%, -50%);
+  transition: 0.4s;
+}
+
+.switch .text.active {
+  transform: translate(-94%, -50%);
+  transition: 0.4s;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #494949;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  box-shadow: 0 0px 15px #2020203d;
+  background: white url("https://i.ibb.co/7JfqXxB/sunny.png");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* .slider.active {
+  background-color: var(--color-primary);
+} */
+
+/* 
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+} */
+
+.slider.active:before {
+  -webkit-transform: translateX(50px);
+  -ms-transform: translateX(50px);
+  transform: translateX(50px);
+  background: white url("./images/dark_mode_icon.svg");
+
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* CSS FOR CHECKBOX ICON */
+[type="checkbox"]:checked {
+  background-image: url(./images/tick_icon.svg);
+  background-size: auto;
+}
+
+/* CSS FOR INPUT FOCUS */
+[type="text"]:focus,
+[type="email"]:focus,
+[type="url"]:focus,
+[type="password"]:focus,
+[type="number"]:focus,
+[type="date"]:focus,
+[type="datetime-local"]:focus,
+[type="month"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="time"]:focus,
+[type="week"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  border-color: #009bb4;
+  box-shadow: none;
+}
+
+
+.select span{
+display: none;
+}
+
+.select svg{
+  fill: #ffffff;
+}
+
+.select p{
+  color: #ffffff;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+
+
+/* .react-pdf__Document {
+  height: 100%;
+}
+.react-pdf__Page {
+  height: 50%;
+} */
+.react-pdf__Page {
+  position: absolute !important;
+  z-index: 1;
+}
+
+.react-pdf__Document{
+  height: 800px; 
+}
+
+#tailwind-pdf-viewer .pb-\[14rem\] {
+  background-color: #1e1e1e !important;
+}
+#tailwind-pdf-viewer .opacity-\[0\.9\] {
+  background-color: #1e1e1e !important;
+}
+#tailwind-pdf-viewer .py-2 {
+  background-color: black !important;
+}
+#tailwind-pdf-viewer .shadow-stone-800 {
+  margin-top: 8% !important;
+}
+
+/* Assuming you are using CSS */
+.custom-dropdown {
+  background-color: black;
+  color: white;
+}
+
+/* Style the options list */
+.react-dropdown-select {
+  background-color: black;
+  color: white;
+}
+
+/* Style the individual option items */
+.react-dropdown-select-item {
+  color: white;
+}
+
+/* Style the selected option */
+.react-dropdown-select-value {
+  color: white;
+}
+
+.Dropdown-control{
+  background-color:black !important;
+  color: linear-gradient(91.22deg, #00eed1 3.15%, #009bb4 99.56%), #ffffff !important;
+}
+.Dropdown-placeholder{
+  color: #009bb4 !important;
+}
